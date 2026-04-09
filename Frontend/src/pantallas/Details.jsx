@@ -1,17 +1,26 @@
 export default function Details({ item, onBack }) {
   return (
-    <div className="container">
-      <button onClick={onBack}>← Volver</button>
+    <div className="detail-container">
+      <button className="back-btn" onClick={onBack}>
+        ← Volver
+      </button>
 
-      <h2>{item.name}</h2>
+      <div className="detail-card">
+        <img
+          className="detail-img"
+          src={item.image?.original}
+          alt=""
+        />
 
-      <img
-        className="detail-img"
-        src={item.image?.original}
-        alt=""
-      />
+        <div className="detail-text">
+          <h1>{item.name}</h1>
 
-      <div dangerouslySetInnerHTML={{ __html: item.summary }} />
+          <div
+            className="summary"
+            dangerouslySetInnerHTML={{ __html: item.summary }}
+          />
+        </div>
+      </div>
     </div>
   );
 }

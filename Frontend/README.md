@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+# MovieApp - Aplicación de Búsqueda de Series
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Descripción
 
-## Available Scripts
+**MovieApp** es una aplicación web desarrollada con **React y JavaScript** que permite a los usuarios buscar series de televisión mediante una API externa.
 
-In the project directory, you can run:
+La aplicación cuenta con autenticación básica, una interfaz moderna y un diseño responsive adaptable a dispositivos móviles y de escritorio.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Funcionalidades
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* 🔐 Login de usuario
+* 🔎 Búsqueda de series en tiempo real
+* 🎬 Visualización de resultados en tarjetas
+* 📄 Vista detallada de cada serie
+* 📱 Diseño responsive (3 columnas en móvil / 5 en PC)
+* 🎨 Interfaz moderna tipo streaming
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧠 Tecnologías utilizadas
 
-### `npm run build`
+* ⚛️ React
+* 🟨 JavaScript (ES6)
+* 🎨 CSS (Flexbox y Grid)
+* 🌐 API externa: TVMaze
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🌐 API utilizada
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Se utiliza la API pública de TVMaze para obtener información de series:
 
-### `npm run eject`
+https://api.tvmaze.com/search/shows?q=nombre
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Esta API permite:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Obtener nombre de la serie
+* Imagen
+* Descripción (summary)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🧱 Estructura del proyecto
 
-## Learn More
+```
+API-Busqueda/
+ ├── frontend/
+ │    ├── public/
+ │    ├── src/
+ │    │    ├── componentes/
+ │    │    │     ├── Login.jsx
+ │    │    │     └── Card.jsx
+ │    │    ├── pantallas/
+ │    │    │     ├── Search.jsx
+ │    │    │     └── Details.jsx
+ │    │    ├── App.js
+ │    │    ├── index.js
+ │    │    └── index.css
+ │    ├── package.json
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ⚙️ Instalación y ejecución
 
-### Code Splitting
+### 1️⃣ Clonar el repositorio
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+git clone https://github.com/vnheredia/API-Busqueda.git
+cd API-Busqueda/frontend
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 2️⃣ Instalar dependencias
 
-### Making a Progressive Web App
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+### 3️⃣ Ejecutar la aplicación
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm start
+```
 
-### Deployment
+La aplicación se abrirá en:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+http://localhost:3000
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🔄 Flujo de la aplicación
+
+1. Usuario ingresa credenciales
+2. Accede a la pantalla de búsqueda
+3. Realiza una búsqueda de series
+4. Visualiza resultados en tarjetas
+5. Selecciona una serie
+6. Accede a la vista detallada
+
+---
+
+## 🛠️ Mejoras futuras
+
+* 🔐 Implementación de backend real
+* ❤️ Sistema de favoritos
+* ⭐ Mostrar rating de series
+* ⏳ Animaciones de carga
+* 🌍 Deploy en internet
+
+---
+
+## 👩‍💻 Autor
+
+**Vanessa Nayeli Heredia Nicolalde**
+Estudiante de Sistemas de Información
+
+---
+
+## 🎓 AcadémicO
+
+Este proyecto fue desarrollado como parte del aprendizaje de desarrollo web utilizando React, aplicando conceptos de consumo de APIs, diseño responsive y componentes reutilizables.
+
+---

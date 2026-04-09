@@ -8,18 +8,36 @@ export default function Login({ onLogin }) {
     if (username === "admin" && password === "1234") {
       onLogin();
     } else {
-      alert("Credenciales incorrectas");
+      alert("Usuario o contraseña incorrectos");
     }
   };
 
   return (
-    <div className="container">
-      <h2>Login</h2>
+    <div className="login-container">
+      <div className="login-card">
+        <h1 className="logo">MovieApp</h1>
+        <p className="subtitle">Bienvenido, inicia sesión</p>
 
-      <input placeholder="Usuario" onChange={(e) => setUsername(e.target.value)} />
-      <input type="password" placeholder="Contraseña" onChange={(e) => setPassword(e.target.value)} />
+        <div className="input-group">
+          <label>Usuario</label>
+          <input
+            type="text"
+            placeholder="Ingresa tu usuario"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
 
-      <button onClick={handleLogin}>Ingresar</button>
+        <div className="input-group">
+          <label>Contraseña</label>
+          <input
+            type="password"
+            placeholder="Ingresa tu contraseña"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+
+        <button onClick={handleLogin}>Ingresar</button>
+      </div>
     </div>
   );
 }
