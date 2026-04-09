@@ -13,8 +13,7 @@ export default function Search({ onSelect }) {
 
   return (
     <div className="container">
-      <h2>Búsqueda</h2>
-
+      <h2>🎬 Buscar Series</h2>
       <input value={query} onChange={(e) => setQuery(e.target.value)} />
       <button onClick={handleSearch}>Buscar</button>
 
