@@ -88,10 +88,6 @@ npm install
 npm start
 ```
 
-La aplicación se abrirá en:
-
-http://localhost:3000
-
 ---
 
 ## 🔄 Flujo de la aplicación
@@ -122,7 +118,7 @@ Estudiante de Sistemas de Información
 
 ---
 
-## 🎓 AcadémicO
+## 🎓 Académico
 
 Este proyecto fue desarrollado como parte del aprendizaje de desarrollo web utilizando React, aplicando conceptos de consumo de APIs, diseño responsive y componentes reutilizables.
 
