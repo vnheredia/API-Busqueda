@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { searchShows } from "../servicios/Api";
 import Card from "../componentes/Card";
 
 export default function Search({ onSelect }) {
@@ -7,18 +6,16 @@ export default function Search({ onSelect }) {
   const [data, setData] = useState([]);
 
   const handleSearch = async () => {
-    const res = await searchShows(query);
-    setData(res);
+    const res = await fetch(`https://api.tvmaze.com/search/shows?q=${query}`);
+    const json = await res.json();
+    setData(json);
   };
 
   return (
-    <div>
-      <input
-        placeholder="Buscar serie..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
+    <div className="container">
+      <h2>Búsqueda</h2>
 
+      <input value={query} onChange={(e) => setQuery(e.target.value)} />
       <button onClick={handleSearch}>Buscar</button>
 
       <div className="grid">
